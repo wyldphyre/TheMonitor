@@ -20,13 +20,10 @@ namespace TheMonitor
     private void Initialise()
     {
       // Build constant menu items
-      var configureItem = AddMenuItem("Configure", TheMonitor.Properties.Resources.configure_16x16);
-      
+      AddMenuItem("Configure", TheMonitor.Properties.Resources.configure_16x16, configureItemClick);
       AddMenuSeparator();
-
-      var exitItem = AddMenuItem("Exit", Image.FromHbitmap(TheMonitor.Properties.Resources.exit_16x16.GetHbitmap()));
-      exitItem.Click += exitItem_Click;
-
+      AddMenuItem("Exit", TheMonitor.Properties.Resources.exit_16x16, exitItemClick);
+      
       Run();
     }
 
@@ -55,9 +52,14 @@ namespace TheMonitor
       // Add any items here that might need to be updated each time the menu opens
       //notifyIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
     }
-    private void exitItem_Click(object sender, EventArgs e)
+    private void exitItemClick(object sender, EventArgs e)
     {
       ExitThread();
+    }
+    private void configureItemClick(object sender, EventArgs e)
+    {
+      // TO DO: 
+      throw new ApplicationException("Not implemented");
     }
 
     private bool Running { get; set; }
