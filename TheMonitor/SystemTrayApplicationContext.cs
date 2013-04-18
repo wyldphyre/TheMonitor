@@ -47,7 +47,10 @@ namespace TheMonitor
     {
       notifyIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
     }
-
+    protected void ExitApplication()
+    {
+      ExitThread();
+    }
     protected void SetIcon(Icon image)
     {
       notifyIcon.Icon = image;
