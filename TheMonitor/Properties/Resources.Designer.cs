@@ -83,9 +83,9 @@ namespace TheMonitor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap play_12x16 {
+        internal static System.Drawing.Bitmap run_12x16 {
             get {
-                object obj = ResourceManager.GetObject("play_12x16", resourceCulture);
+                object obj = ResourceManager.GetObject("run_12x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
