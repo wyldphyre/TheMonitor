@@ -11,7 +11,7 @@ namespace TheMonitor
   {
     public TheMonitorApplicationContext() : base()
     {
-      base.DoubleClickEvent += TheMonitor_DoubleClickEvent;
+      base.IconDoubleClickEvent += TheMonitor_DoubleClickEvent;
       base.ContextMenuOpeningEvent += TheMonitor_ContextMenuOpeningEvent;
 
       Initialise();

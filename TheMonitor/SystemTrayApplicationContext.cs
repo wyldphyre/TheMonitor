@@ -22,7 +22,7 @@ namespace TheMonitor
       notifyIcon.DoubleClick += notifyIcon_DoubleClick;
     }
 
-    public event Action DoubleClickEvent;
+    public event Action IconDoubleClickEvent;
     public event System.ComponentModel.CancelEventHandler ContextMenuOpeningEvent;
 
     public string IconText
@@ -69,8 +69,8 @@ namespace TheMonitor
 
     private void notifyIcon_DoubleClick(object sender, EventArgs e)
     {
- 	    if (DoubleClickEvent != null)
-        DoubleClickEvent();
+ 	    if (IconDoubleClickEvent != null)
+        IconDoubleClickEvent();
     }
     private void ContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
     {
