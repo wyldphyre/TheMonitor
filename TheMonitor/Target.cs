@@ -26,7 +26,7 @@ namespace TheMonitor
     }
 
     public string FileMask { get; private set; }
-    private ActivityType Type { get; private set; }
+    public ActivityType Type { get; private set; }
   }
 
   enum ActivityType
