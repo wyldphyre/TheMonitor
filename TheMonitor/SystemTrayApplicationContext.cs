@@ -20,8 +20,10 @@ namespace TheMonitor
       };
       notifyIcon.ContextMenuStrip.Opening += ContextMenuStrip_Opening;
       notifyIcon.DoubleClick += notifyIcon_DoubleClick;
+      notifyIcon.Click += notifyIcon_Click;
     }
 
+    public event Action IconClickEvent;
     public event Action IconDoubleClickEvent;
     public event System.ComponentModel.CancelEventHandler ContextMenuOpeningEvent;
 
@@ -67,6 +69,11 @@ namespace TheMonitor
       base.ExitThreadCore();
     }
 
+    private void notifyIcon_Click(object sender, EventArgs e)
+    {
+      if (IconClickEvent != null)
+        IconClickEvent();
+    }
     private void notifyIcon_DoubleClick(object sender, EventArgs e)
     {
  	    if (IconDoubleClickEvent != null)
